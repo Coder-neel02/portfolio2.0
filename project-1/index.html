@@ -12,21 +12,67 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__content">
-      <a class="header__logo-container" href="/">
-        <img src="./assetsp1/profile-pic-8.png" alt="Coder-neel02" class="header__logo-img" />
-        <span class="header__logo-sub">NABAMIT DUTTA</span>
-      </a>
-      <nav>
-        <ul class="header__links">
-          <li><a class="header__link" href="/">Home</a></li>
-          <li><a class="header__link" href="/#about">About</a></li>
-          <li><a class="header__link" href="/#projects">Project</a></li>
-          <li><a class="header__link" href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <div class="header__content">
+    <div class="header__logo-container">
+      <div class="header__logo-img-cont">
+        <img
+          src="./assetsp1/profile-pic-8.png"
+          alt="Nabamit Dutta Logo Image"
+          class="header__logo-img"
+        />
+      </div>
+      <span class="header__logo-sub">
+        <a href="https://coder-neel02.github.io/portfolio2.0.5/">
+          Nabamit Dutta
+        </a>
+      </span>
     </div>
-  </header>
+
+    <div class="header__main">
+      <ul class="header__links">
+        <li class="header__link-wrapper">
+          <a href="./" class="header__link">Home</a>
+        </li>
+        <li class="header__link-wrapper">
+          <a href="./#about" class="header__link">About</a>
+        </li>
+        <li class="header__link-wrapper">
+          <a href="./#projects" class="header__link">Projects</a>
+        </li>
+        <li class="header__link-wrapper">
+          <a href="./#contact" class="header__link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Hamburger menu container -->
+      <div class="header__main-ham-menu-cont" role="button" tabindex="0" aria-label="Toggle menu" aria-expanded="false">
+        <img
+          src="./assetsp1/ham-menu.svg"
+          alt="hamburger menu"
+          class="header__main-ham-menu"
+        />
+        <img
+          src="./assetsp1/ham-menu-close.svg"
+          alt="hamburger menu close"
+          class="header__main-ham-menu-close d-none"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Small screen menu -->
+  <div class="header__sm-menu">
+    <div class="header__sm-menu-content">
+      <ul class="header__sm-menu-links">
+        <li class="header__sm-menu-link"><a href="./">Home</a></li>
+        <li class="header__sm-menu-link"><a href="./#about">About</a></li>
+        <li class="header__sm-menu-link"><a href="./#projects">Projects</a></li>
+        <li class="header__sm-menu-link"><a href="./#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- main -->
   <section class="project-hero">
     <div class="project-hero__content">
       <h1 class="heading-primary">Simon Game</h1>
@@ -97,5 +143,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="script.js"></script>
 </body>
 </html>

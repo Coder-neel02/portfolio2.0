@@ -378,13 +378,28 @@ textarea { resize: none; }
   font-size: 1.6rem;
 }
 .contact__btn {
+  display: block;
+  margin: 2rem auto 0 auto;
   width: 30%;
   padding: 2rem 4rem;
   font-size: 1.6rem;
+  background: #7843E9;       /* Your chosen color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
 }
+
+.contact__btn:active {
+  background: #502bb5;       /* A darker shade for active state */
+}
+
 @media only screen and (max-width: 37.5em) {
   .contact__btn { width: 100%; }
 }
+
+
+
 
 /* Project Case Study Section */
 .project-cs-hero {

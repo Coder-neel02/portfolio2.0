@@ -158,3 +158,99 @@ ul { list-style: none; }
   .heading-primary { font-size: 2.1rem; }
 }
 
+
+
+
+
+
+
+
+/* Hide hamburger menu on large screens */
+.header__main-ham-menu-cont {
+  display: none;
+}
+
+/* Show hamburger menu on smaller screens (e.g., max-width 768px or as per your design) */
+@media (max-width: 768px) {
+  .header__main-ham-menu-cont {
+    display: block;
+  }
+  
+  /* Also, typically you want to hide the normal nav links on small screens */
+  .header__links {
+    display: none;
+  }
+}
+
+/* On large screens, show the nav links */
+@media (min-width: 769px) {
+  .header__links {
+    display: flex; /* or block/flex as per your design */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.d-none {
+  display: none !important;
+}
+
+
+.header__sm-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.header__sm-menu.header__sm-menu--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header__sm-menu-content {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.header__sm-menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: right;  /* Change to right if you want */
+}
+
+.header__sm-menu-link a {
+  display: block;
+  padding: 15px 0;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
