@@ -37,52 +37,26 @@ headerLogoConatiner.addEventListener('click', () => {
   location.href = '/'
 })
 
+// conect to google form
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzN24lYTCZ0mzRaeFiRyKnkmtGN1ry3kKHxwtCu3eV_dWJHwmaWTQvlBM-TG_GMpiiuvg/exec';
+  const form = document.forms['submit-to-google-sheet'];
 
-
- const form = document.querySelector('.contact__form');
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwhmfJXyBnQNHeyiH4T0LdOvsIFrQEUozIenumzGULI8FFzY9EU9L_YsTBPDH8rJVQLWg/exec';
-
-form.addEventListener('submit', e => {
+  form.addEventListener('submit', e => {
   e.preventDefault();
 
-  const data = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    message: form.message.value.trim()
-  };
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok (${response.statusText})`);
+      }
+      alert('Form submitted successfully!');  // Alert user
 
-  // Basic client-side validation
-  if (!data.name || !data.email || !data.message) {
-    alert('Please fill in all the form fields before submitting.');
-    return;
-  }
-
-  // Optional: Log the data to console for debugging
-  console.log('Sending data:', data);
-
-  fetch(scriptURL, {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: { 'Content-Type': 'application/json' }
-  })
-  .then(response => {
-    // Check if response is okay, then parse JSON
-    if (!response.ok) {
-      throw new Error(`Network response was not OK. Status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(json => {
-    console.log('Response from server:', json);
-    if (json.result === 'success') {
-      alert('Thank you for contacting us! We will get back to you soon.');
-      form.reset();
-    } else {
-      alert('There was an error submitting your form: ' + (json.error || 'Unknown error'));
-    }
-  })
-  .catch(error => {
-    console.error('Fetch error:', error);
-    alert('Error! ' + error.message);
-  });
+      // Reload the page after successful submission
+      window.location.href = "./";
+    })
+    .catch(error => {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting the form. Please try again.');
+    });
 });
+
