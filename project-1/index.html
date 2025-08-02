@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simon Game - Case Study | Coder-neel02</title>
+  <meta name="description" content="Case study of the Simon Game project." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo-container" href="/">
+        <img src="./assetsp1/profile-pic-8.png" alt="Coder-neel02" class="header__logo-img" />
+        <span class="header__logo-sub">NABAMIT DUTTA</span>
+      </a>
+      <nav>
+        <ul class="header__links">
+          <li><a class="header__link" href="/">Home</a></li>
+          <li><a class="header__link" href="/#about">About</a></li>
+          <li><a class="header__link" href="/#projects">Project</a></li>
+          <li><a class="header__link" href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="project-hero">
+    <div class="project-hero__content">
+      <h1 class="heading-primary">Simon Game</h1>
+      <p class="text-primary">
+        This case study presents the Simon Game project, including an overview, tools used, and links to try it yourself.
+      </p>
+      <div class="project-hero__cta">
+        <a href="https://github.com/Coder-neel02/simon-game" target="_blank" class="btn btn--bg" rel="noopener">View on GitHub</a>
+        <a href="https://coder-neel02.github.io/simon-game/" target="_blank" class="btn btn--bg" rel="noopener">See Live</a>
+      </div>
+    </div>
+  </section>
+  <section class="project-details" id="project">
+    <div class="main-container">
+      <div class="project-details__content">
+        <div class="project-details__showcase-img-cont">
+          <img src="./assetsp1/dopefolio.jpeg" alt="Simon Game Demo" class="project-details__showcase-img" />
+        </div>
+        <div class="project-details__content-main">
+          <div class="project-details__desc">
+            <h2 class="project-details__content-title">Project Overview</h2>
+            <p class="project-details__desc-para">
+              Simon Game is a classic memory game built with HTML, CSS, and JavaScript. Players must memorize and repeat an increasing sequence of button presses, as the game tests and develops their short-term memory skills. The challenge intensifies with each correct round, making it fun and engaging for users of all ages.
+            </p>
+            <p class="project-details__desc-para">
+              The UI is designed to be modern, simple, and mobile-responsive. This project was an opportunity to strengthen my JavaScript DOM, audio, and event handling skills. It is deployed as a static site on GitHub Pages and the code is open-source for anyone to learn from or extend.
+            </p>
+          </div>
+          <div class="project-details__tools-used">
+            <h2 class="project-details__content-title">Tools Used</h2>
+            <div class="skills">
+              <div class="skills__skill">HTML5</div>
+              <div class="skills__skill">CSS3</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">Git & GitHub</div>
+            </div>
+          </div>
+          <div class="project-details__links">
+            <h2 class="project-details__content-title">Links</h2>
+            <a href="https://github.com/Coder-neel02/simon-game" target="_blank" class="btn btn--med btn--theme project-details__links-btn" rel="noopener">Project Repo</a>
+            <a href="https://coder-neel02.github.io/simon-game/" target="_blank" class="btn btn--med btn--theme-inv project-details__links-btn" rel="noopener">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div>
+          <h2 class="heading heading-sm">Social</h2>
+          <div class="main-footer__social-cont">
+            <a href="https://github.com/Coder-neel02" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="main-footer__icon" /></a>
+            <a href="https://linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="main-footer__icon" /></a>
+            <!-- Add more social links as needed -->
+          </div>
+        </div>
+        <div>
+          <h2 class="heading heading-sm text-lt">NABAMIT DUTTA</h2>
+          <p class="main-footer__short-desc">A Frontend Web Developer passionate about creating interactive games and experiences with JavaScript.</p>
+        </div>
+      </div>
+      <div class="main-footer__lower">
+        &copy; <span id="year"></span> by <a href="https://github.com/Coder-neel02" target="_blank">NABAMIT DUTTA</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
