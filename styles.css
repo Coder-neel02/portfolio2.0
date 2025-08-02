@@ -170,7 +170,7 @@ textarea { resize: none; }
 /* 7. Sections: Hero, About, Projects, Contact, Footer */
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,0.8)),url(./assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
